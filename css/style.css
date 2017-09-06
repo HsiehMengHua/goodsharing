@@ -1,0 +1,1358 @@
+/************************* 全域基本設定 *************************/
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5em;
+  color: #313b4f;
+  background-color: #F4F4F4;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.clear > * {
+  float: left;
+}
+
+
+/************************* 導覽列 *************************/
+
+.nav-icon4 {display: none;}
+
+header {
+  z-index: 99;
+  position: relative;
+  padding: 30px 85px;
+  color: #333;
+}
+
+header.lengthen {
+  margin-bottom: 100vh;
+  height: 100px;
+}
+
+.logo {
+  margin-left: 0;
+  margin-top: 0;
+  float: left;
+}
+
+nav {
+  position: absolute;
+  top: 40px;
+  right: 85px;
+  font-size: 1.15em;
+}
+
+nav > div {
+  display: inline-block;
+  margin-left: 70px;
+}
+
+nav .navLeft li {
+  display: inline-block;
+  margin-left: 45px;
+  font-size: 1.15em;
+  letter-spacing: 4px;
+}
+
+nav .navLeft a {
+  -webkit-transition: color 0.6s, font-weight 0.6s;
+          transition: color 0.6s, font-weight 0.6s;
+}
+
+nav .navLeft a:hover {
+  font-weight: bolder;
+  color: #d02d2d;
+}
+
+nav .navRight a:hover {
+  color: #828ea5;
+}
+
+
+/*--------- 瘦版nav ---------*/
+
+.header-thin,
+.header-fixed {
+  background-color: white;
+  padding: 12px 85px;
+  top: 0;
+  width: 100%;
+  height: auto!important;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px;
+}
+
+.header-thin .logo img,
+.header-fixed .logo img {
+  width: 70%;
+}
+
+.header-thin nav,
+.header-fixed nav {
+  font-size: 1em;
+  top: 16px;
+}
+
+.header-thin {
+  position: static;
+}
+
+.header-fixed {
+  position: fixed;
+}
+
+/************************** 輪播背景圖 ***************************/
+
+.jumbotron {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 97;
+}
+
+.gradient {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 98;
+  background: transparent; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(transparent, #F4F4F4); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(transparent, #F4F4F4); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(transparent, #F4F4F4); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(transparent, #F4F4F4); /* Standard syntax */
+}
+
+.gradient .copy {
+  text-align: right;
+  padding-right: 85px;
+  margin-top: -30px;
+}
+
+.gradient .copy h1 {
+  color: #ea6359;
+  font-size: 2.6em;
+  margin-bottom: 45px;
+}
+
+.gradient .copy p {
+  font-size: 1.3em;
+  margin: 20px;
+}
+
+.gradient .arrow {
+  font-size: 72px;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  color: rgba(67, 77, 98, 0.6);
+  cursor: pointer;
+  -webkit-transform: rotate(-90deg);
+     -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+       -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+
+}
+
+
+
+/* Bouncing animation */
+
+.gradient .arrow .wrapper {
+  -webkit-animation: bounce 2s infinite;
+     -moz-animation: bounce 2s infinite;
+       -o-animation: bounce 2s infinite;
+          animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateX(0);
+       -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+         -o-transform: translateX(0);
+            transform: translateX(0);
+  }
+  40% {
+    -webkit-transform: translateX(30px);
+       -moz-transform: translateX(30px);
+        -ms-transform: translateX(30px);
+         -o-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  60% {
+    -webkit-transform: translateX(15px);
+       -moz-transform: translateX(15px);
+        -ms-transform: translateX(15px);
+         -o-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+}
+
+
+
+
+/************************* 側邊分類列表 *************************/
+
+aside nav {display: none;}
+
+aside {
+  width: 25%;
+  font-size: 1.15em;
+  line-height: 2.2em;
+  letter-spacing: 3px;
+  background-color: white;
+}
+
+aside .searchBox {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: #607e8b;
+  padding: 15px;
+}
+
+aside input {
+  border: 1px solid #b1b1b1;
+  border-radius: 4px;
+  outline: none;
+  padding: 10px 50px 10px 15px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.85em;
+  color: #313b4f;
+  width: 100%;
+  background-image: url(../img/icon/search.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+aside button {
+  height: 25px;
+  border: 0;
+  outline: none;
+  background: none;
+  position: relative;
+  top: 5px;
+  cursor: pointer;
+}
+
+aside img {
+  height: 100%;
+}
+
+aside ul {
+  background-color: white;
+  width: 100%;
+  padding: 5px 40px 0 40px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+aside ul li {
+  border-bottom: 1px solid #bcb2a6;
+  padding: 5px 35px;
+}
+
+aside.green {
+  background-color: #def0da;
+}
+
+
+
+
+
+/************************* 主要內容區塊 *************************/
+
+main > .container{
+  max-width: 1150px;
+  margin: auto;
+  padding-top: 75px;
+}
+
+main.sharePage {
+  margin-top: 58px;
+}
+
+.contentBlk {
+  margin-top: 40px;
+  padding: 0 45px;
+}
+
+.my-account .contentBlk {
+  padding: 40px 45px;
+}
+
+
+/************************* 物品列表區 *************************/
+
+.heading {
+  border-bottom: 2px solid #d02d2d;
+  padding-bottom: 15px;
+  margin-bottom: 60px;
+}
+
+.orderAll .heading {
+  margin-bottom: 20px;
+}
+
+section {
+  width: 75%;
+  margin: 0 auto;
+  padding-left: 70px;
+}
+
+.grid {
+  margin-left: -7px;
+  margin-top: 40px;
+}
+
+.grid .wrapper {
+  display: inline-block;
+  margin-left: -4px;
+  margin-bottom: 35px;
+  width: 25%;
+  padding-left: 10px;
+}
+
+.grid-item {
+  /*opacity: 0;*/
+  border-radius: 4px;
+  border: 1px solid transparent; /* 透明邊要留著，不然會錯掉 */
+  background-color: white;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 3px;
+  cursor: zoom-in;
+}
+
+.grid-item .image-wrapper {
+  height: 187px;
+}
+
+.grid-item img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.grid-item .devider {
+  width: 70%;
+  height: 1px;
+  background-color: #d4e0eb;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.grid-item .content {
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.grid-item .title {
+  font-size: 1.15em;
+  height: 45px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.grid-item .organizer {
+  font-size: 0.8em;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.grid-item span {
+  font-size: 0.8em;
+  color: #51a75a;
+}
+
+.grid-item .w3-progress-container {
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+.listBottom {
+  width: 40px;
+  margin: auto;
+  display: block;
+  margin-bottom: 60px;
+}
+
+
+
+
+/*-------- grid-item 進場動畫 ---------*/
+
+.rotateInUpLeft {
+  -webkit-animation: rotateInUpLeft 1s;
+     -moz-animation: rotateInUpLeft 1s;
+       -o-animation: rotateInUpLeft 1s;
+          animation: rotateInUpLeft 1s;
+}
+
+.fadeInUp {
+  -webkit-animation: fadeInUp 1s;
+     -moz-animation: fadeInUp 1s;
+       -o-animation: fadeInUp 1s;
+          animation: fadeInUp 1s;
+}
+
+@keyframes rotateInUpLeft {
+  from {
+    transform-origin: left center;
+    transform: rotate3d(0, 0, 1, 20deg);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: left center;
+    transform: none;
+    opacity: 1;
+  }
+}
+@-moz-keyframes rotateInUpLeft {
+  from {
+    transform-origin: left center;
+    transform: rotate3d(0, 0, 1, 20deg);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: left center;
+    transform: none;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rotateInUpLeft {
+  from {
+    transform-origin: left center;
+    transform: rotate3d(0, 0, 1, 20deg);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: left center;
+    transform: none;
+    opacity: 1;
+  }
+}
+@-o-keyframes rotateInUpLeft {
+  from {
+    transform-origin: left center;
+    transform: rotate3d(0, 0, 1, 20deg);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: left center;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity:0;
+    transform: translate3d(0, 30%, 0);
+  }
+  to {
+    opacity:1;
+    transform: none;
+  }
+}
+@-moz-keyframes fadeInUp {
+  from {
+    opacity:0;
+    transform: translate3d(0, 30%, 0);
+  }
+  to {
+    opacity:1;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity:0;
+    transform: translate3d(0, 30%, 0);
+  }
+  to {
+    opacity:1;
+    transform: none;
+  }
+}
+@-o-keyframes fadeInUp {
+  from {
+    opacity:0;
+    transform: translate3d(0, 30%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+
+
+
+/*-------- Loader Animation ---------*/
+
+.listBottom .end {
+  color: #9f9f9f;
+}
+
+.listBottom .loading{
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 1000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 1000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 1000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+
+
+/* 垃圾區 
+
+.grid-item button {
+  display: none;
+  width: 100%;
+  border: 0;
+  background-color: #eabb6f;
+  color: white;
+  font-size: 0.85em;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+}
+
+.grid-item:hover button {
+  display: block;
+}
+
+.grid-item button:hover {
+  background-color: #e5ad53;
+}*/
+
+
+
+/*------------ 詳細資訊 彈跳視窗 ------------*/
+
+button:hover .swing {
+  animation: swing 1s;
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+button .close-icon{
+  -webkit-transition: -webkit-transform 1s;
+          transition: transform 1s;
+}
+
+button:hover .close-icon{
+  -webkit-transform: rotate(540deg);
+     -moz-transform: rotate(540deg);
+      -ms-transform: rotate(540deg);
+       -o-transform: rotate(540deg);
+          transform: rotate(540deg);
+}
+
+
+
+/************************** 後台管理頁面 *************************/
+
+
+/*-------- 贈物訂單記錄區 ---------*/
+
+.order-list-item {
+  margin-top: 40px;
+}
+
+.order-list-item .datetime {
+  color: #607e8b;
+}
+
+.order-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-list tbody .col-1, .order-list tbody .col-2 {
+  cursor: pointer;
+}
+
+.order-list table thead,
+.order-list table tbody {
+  border: 1px solid #c5c5c5;
+}
+
+.order-list table thead {
+  background-color: #e3e9ef;
+}
+
+.order-list table th {
+  font-weight: normal;
+  font-size: 0.85em;
+  padding: 10px 0;
+}
+
+.order-list table tbody {
+  background-color: white;
+}
+
+.order-list tr {
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.order-list td {
+  padding: 10px;
+}
+
+.my-account .order-list td, .order-list .col-1 p {
+  line-height: 80px;
+}
+
+.order-list td button {
+  line-height: 1.5em;
+}
+
+.order-list td.col-2 {
+  border-left: 1px dotted #c5c5c5;
+  border-right: 1px dotted #c5c5c5;
+  text-align: center;
+}
+
+.order-list .col-1 {
+  width: 60%;
+}
+
+.order-list .col-2 {
+  width: 10%;
+}
+
+.order-list .col-3 {
+  width: 30%;
+}
+
+.order-list .image-wrapper {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+  float: left;
+}
+
+.order-list .btn {
+  float: right;
+}
+
+.order-list button {
+  display: block;
+  width: 100px;
+  padding: 8px;
+  margin-top: 5px;
+  border: 0;
+  color: white;
+  background-color: #607e8b;
+}
+
+.order-list button.arrived {
+  float: right;
+}
+
+.order-list button.cancel {
+  background-color: transparent;
+  border: 2px solid #607e8b;
+  color: #607e8b;
+  
+}
+
+.order-list .order-detail {
+  display: none;
+  padding: 20px 40px;
+  text-align: left;
+  border-top: 1px solid #c5c5c5;
+  box-shadow: inset rgba(0, 0, 0, 0.08) 0px 2px 8px;
+  background-color: #f4f4f4;
+}
+
+.order-list .order-detail ul.left {
+  color: #7c8b91;
+}
+
+.order-list .order-detail li {
+  margin-top: 10px;
+}
+
+.order-list .order-detail li a {
+  font-weight: bold;
+  color: #837f79;
+}
+
+.order-list .order-detail .devider {
+  height: 185px;
+  width: 1px;
+  background-color: #c5c5c5;
+  margin: 15px 25px;
+}
+
+.orderAll input {
+  width: 120px;
+  padding: 6px 2px;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #313b4f;
+  color: #313b4f;
+  font-size: 0.85em;
+  text-align: center;
+  margin: 0 15px;
+}
+
+.orderAll select {
+  width: 120px;
+  padding: 6px;
+  border: 0;
+}
+
+.orderAll .searchBox p {
+  font-size: 0.85em;
+  color: #767676;
+  margin-top: 10px;
+}
+
+.orderAll .searchBox p span {
+  margin: 0 5px;
+  color: #eb8546;
+}
+
+.orderAll .searchBox button {
+  background-color: transparent;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 13px;
+  margin-left: 15px;
+}
+
+.back {
+  background-color: transparent;
+  color: #313b4f;
+  font-size: 1em;
+  border: 2px solid #55bbb5;
+  border-radius: 2px;
+  padding: 5px 10px;
+  margin-top: 40px;
+  text-align: center;
+  width: 100px;
+}
+
+.back span {
+  font-size: 2em;
+  position: relative;
+  top: 5px;
+  margin-right: 5px;
+}
+
+.back:hover {
+  background-color: #55bbb5;
+  color: white;
+}
+
+back:hover span {
+  color: white;
+}
+
+
+
+
+/*------------ 物品列表 --------------*/
+
+.edit-tag {
+  background-color: #55bbb5;
+  top: -4px;
+  right: -4px;
+  color: white;
+  padding: 5px 10px;
+  letter-spacing: 5px;
+  display: none;
+}
+
+.grid-item .edit-tag {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+}
+
+.grid-item:hover .edit-tag {
+  display: block;
+}
+
+.grid-item form {
+  display: none;
+  font-size: 20px;
+}
+
+
+
+
+/*--------- Organizer頁 ----------*/
+
+.organizer .back {
+  margin-left: 45px;
+}
+
+.organizer section {
+  width: 60%;
+  float: right;
+  margin-top: 52px;
+  padding: 70px 105px;
+}
+
+.organizer .image .container {
+  height: 100%;
+}
+
+.organizer .image .container p {
+  line-height: 100vh;
+  width: 130px;
+  margin: auto;
+}
+
+.organizer .image {
+  width: 40%;
+  height: 100%;
+  position: fixed;
+  background-position: center;
+  overflow: hidden;
+}
+
+.contact-info, .profile {
+  background-color: #f5edda;
+  padding: 20px 35px;
+  border-radius: 8px;
+  border-bottom: 4px solid #ebd5a1;
+  line-height: 2em;
+  margin-top: 50px;
+}
+
+.organizer article p {
+  margin-top: 50px;
+  line-height: 2em;
+}
+
+.story, .need-itemsList {
+  margin-top: 60px;
+}
+
+.organizer .grid .wrapper {
+  width: 33.3%;
+}
+
+.my-account section {
+  max-width: 950px;
+  margin: auto;
+  margin-top: 58px;
+  padding-top: 70px;
+}
+
+
+
+/*--------- 相簿管理頁 ----------*/
+
+.album .container, .orderAll .container {
+  margin: 90px 0;
+}
+
+#tabs {
+  margin-top: 118px;
+}
+
+#tabs #add {
+  float: left;
+}
+
+#tabs #add span {
+  cursor: crosshair;
+}
+
+.by li {
+  border: 0;
+  background: none;
+  padding: 7px 25px;
+  letter-spacing: 2px;
+  font-size: 0.87em;
+  border-radius: 5px;
+  margin-right: 25px;
+  font-weight: lighter;
+  cursor: pointer;
+  outline: none;
+}
+
+.by li a {
+  outline: none;
+}
+
+.by li:hover {
+  background-color: #eaeaea;
+}
+
+.by li.active {
+  background-color: #646d7c;
+  color: white;
+}
+
+
+
+/*--------- 故事分享區塊 ----------*/
+
+.story .image-wrapper{
+  width: 25%;
+  height: 100%;
+}
+
+.story img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.story .content {
+  height: 150px;
+  overflow: hidden;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+}
+
+.story .content > div {
+  height: 100%;
+}
+
+.story article {
+  width: 75%;
+  background-color: white;
+  padding: 10px 40px;
+}
+
+.story article p {
+  margin-top: 7px;
+}
+
+.story .more, .heading .more {
+  color: #29a7b2;
+  text-align: right;
+  border: 0;
+}
+
+.story .more {
+  margin-top: 40px;
+}
+
+
+/* 跟故事牆共用 */
+
+.content .datetime {
+  color: #898989;
+  font-size: 13px;
+}
+
+.content h4 {
+  font-size: 16px;
+}
+
+
+
+
+/*************************** 故事牆 ***************************/
+
+.storyWall section {
+  width: auto;
+  padding: 0;
+  margin: 0 80px;
+}
+
+.storyWall .heading{
+  border: 0;
+  margin: 90px 0 60px 0;
+}
+
+.storyWall .heading h2 {
+  text-align: center;
+}
+
+.storyWall .heading h2 a {
+  color: #6a655c;
+}
+
+.storyWall .heading .line {
+  background-color: #d02d2d;
+  height: 2px;
+  width: 70%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.heading .edit {
+  float: right;
+  border: 2px solid #55bbb5;
+  border-radius: 2px;
+  padding: 5px 20px;
+  color: #313b4f;
+}
+
+.heading .edit:hover {
+  background-color: #55bbb5;
+  color: white;
+}
+
+#tiles .content {
+  padding: 10px;
+}
+
+
+
+/* Animation of stretching the underline */
+
+.storyWall .heading .line {
+  -webkit-animation: stretch 1.5s;
+     -moz-animation: stretch 1.5s;
+       -o-animation: stretch 1.5s;
+          animation: stretch 1.5s;
+}
+
+@keyframes stretch {
+    from {
+        width: 0;
+        opacity:0;
+    }
+    to {
+        width: 60%;
+        opacity:1;
+    }
+}
+@-moz-keyframes stretch {
+    from {
+        width: 0;
+        opacity:0;
+    }
+    to {
+        width: 60%;
+        opacity:1;
+    }
+}
+@-webkit-keyframes stretch {
+    from {
+        width: 0;
+        opacity:0;
+    }
+    to {
+        width: 60%;
+        opacity:1;
+    }
+}
+@-o-keyframes stretch {
+    from {
+        width: 0;
+        opacity:0;
+    }
+    to {
+        width: 60%;
+        opacity: 1;
+    }
+}
+
+/* End stretch */
+
+
+/* Fade in when page loads */
+
+#tiles li {
+  -webkit-animation: fadein 1s;
+     -moz-animation: fadein 1s;
+       -o-animation: fadein 1s;
+          animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+      opacity:0;
+    }
+    to {
+      opacity:1;
+    }
+}
+@-moz-keyframes fadein {
+    from {
+      opacity:0;
+    }
+    to {
+      opacity:1;
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+      opacity:0;
+    }
+    to {
+      opacity:1;
+    }
+}
+@-o-keyframes fadein {
+    from {
+      opacity:0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+/* End of fade-in animation */
+
+
+
+
+
+
+
+
+/*======================================== 手機板開始 ========================================*/
+
+
+@media screen and (max-width: 480px){
+  
+  /*********************** 導覽列、側邊選單 *************************/
+  
+  nav {display: none;}
+  .nav-icon4 {display: block;}
+  header {padding: 30px;}
+  .header-thin, .header-fixed {padding: 10px 30px; position: fixed;}
+  .header-thin .logo, .header-fixed .logo {margin-top: 10px;}
+  
+  
+  
+  
+  /************************** 輪播背景圖 ***************************/
+  
+  .gradient .copy {
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .gradient .copy h1 {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+  
+  
+  
+  /************************** 側邊分類 ***************************/
+  
+  aside {
+    width: 250px;
+    position: fixed;
+    top: 73px;
+    left: -250px;
+    height: 100%;
+    overflow-y: scroll;
+    z-index: 96;
+    padding-bottom: 73px;
+    background-color: #39485d;
+  }
+  
+  aside ul {
+    border-radius: 0;
+  }
+  
+  aside ul li {
+    padding: 5px 25px;
+    font-size: 1em;
+  }
+  
+  aside ul li.accAct {
+    font-size: 0.85em;
+    color: lightgray;
+  }
+  
+  aside nav {
+    display: block;
+    position: static;
+    top: 0;
+    right: 0;
+  }
+  
+  aside nav ul {
+    padding: 0;
+  }
+  
+  aside nav li {
+    padding: 5px 30px;
+    background-color: #39485d;
+    color: #ea6359;
+  }
+  
+  
+  
+  /************************* 主要內容區塊 *************************/
+
+  section {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+
+
+  /************************* 物品列表區 *************************/
+
+  .grid .wrapper {width: 100%;}
+  .grid-item img {
+    width: auto;
+    display: block;
+    margin: auto;
+  }
+  
+  
+  
+  /************************** 後台管理頁面 *************************/
+  
+  
+  /*--------- 物品列表 ----------*/
+  
+  .edit-tag {display: block;}
+  
+  
+  
+  /*--------- Organizer頁 ----------*/
+  
+  .organizer .image {
+    width: 100%;
+    height: 300px;
+    position: static;
+    margin-top: 73px;
+  }
+  
+  .organizer .image .container p {
+    line-height: 0;
+    position: relative;
+    top: 40%;
+  }
+  
+  .organizer section {
+    width: 100%;
+    padding: 0;
+  }
+  
+.organizer .back {
+  margin-left: 0;
+  margin-bottom: 40px;
+}
+  
+  .about-info {padding: 20px;}
+  .contentBlk, .my-account .contentBlk {padding: 0;}
+  .organizer .grid .wrapper {width: 100%;}
+  
+  
+  
+  /*------------- 相簿管理 --------------*/
+
+  .album .grid-item img {
+    width: 100%;
+  }
+
+
+  /*------------- 故事牆 --------------*/
+
+  .storyWall {margin-top: 130px;}
+  
+  .storyWall section {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .storyWall .heading .line {
+    width: 90%;
+  }
+
+}
+
+
+

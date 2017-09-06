@@ -1,0 +1,145 @@
+body {
+  position: relative; }
+
+.pull-right {
+  float: right;
+}
+
+/* Container Settings*/
+.container {
+  width: 990px;
+  margin: 95px auto 20px;
+}
+
+.main-content {
+  width: 67%;
+}
+
+.main-content .heading {
+   border-bottom: 0;
+  margin: 0;
+}
+
+.main-content .heading h1 {
+  padding-bottom: 37px;
+  border-bottom: 2px solid #d02d2d;
+  line-height: 1.5em;
+}
+
+.main-content .heading .article-info {
+  font-size: 0.87em;
+  color: #9c9c9c;
+  margin: 20px 0 65px;
+}
+
+.main-content .heading .article-info .material-icons {
+  font-size: 1em;
+}
+
+.main-content img {
+  width: 100%!important;
+  height: auto!important;
+}
+
+.main-content article {
+  padding-top: 65px;
+  margin-bottom: 120px;
+}
+
+.main-content article h1,
+.main-content article h2,
+.main-content article h3,
+.main-content article h4,
+.main-content article h5,
+.main-content article h6 {
+  padding: 20px 0;
+  font-weight: 500;
+}
+
+.main-content article p {
+  margin-bottom: 20px;
+}
+
+.main-content article a {
+  color: #29a7b2;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+.container {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.main-content {
+  width: 100%;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar {
+  display: none;
+}
+}
+
+@media screen and (max-width: 480px) {
+.container {
+  padding: 0 10px;
+}
+}
+
+.sidebar {
+width: 30%;
+background-color: #f7e7cd;
+padding: 30px;
+position: relative;
+}
+
+.sidebar h3 {
+  line-height: 2.5em;
+}
+
+.sidebar li {
+  margin-top: 15px;
+  font-size: 0.88em;
+}
+
+.other-container {
+padding: 30px 40px;
+background-color: #e5e5e5;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.other-container .next-news,
+.other-container .prev-news {
+  width: 270px;
+}
+
+.other-container .next-news p,
+.other-container .prev-news p {
+  margin-top: 10px;
+}
+
+.other-container p {
+  font-size: 0.88em;
+  color: #9b9b9b;
+}
+
+.other-container .image {
+  height: 152px;
+  background-color: lightgray;
+  background-size: cover;
+  background-position: center center;
+  margin: 25px 0;
+}
+
+@media screen and (max-width: 680px) {
+.other-container {
+  flex-direction: column;
+  align-items: center;
+}
+}
+

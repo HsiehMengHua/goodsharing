@@ -1,0 +1,168 @@
+.image .container {
+  position: relative;
+  height: 100%;
+}
+
+.image .edit {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 123px 60px 60px 60px;
+}
+
+.image .edit .container {
+  width: 100%;
+  height: 100%;
+}
+
+.image .edit a {
+  color: white;
+  font-size: 1.5em;
+  letter-spacing: 3px;
+  background-color: #55bbb5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  text-align: center;
+  padding: 10px;
+  margin-left: -70px;
+  display: none;
+}
+
+.image .edit:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.image .edit:hover .container {
+  border: 6px dashed #55bbb5;
+}
+
+.image .edit:hover a {
+  display: block;
+}
+
+.organizer section {
+  padding: 30px 60px;
+}
+
+.about-info {
+  padding: 40px 45px;
+  position: relative;
+}
+
+.about-info:hover {
+  border: 4px dashed #55bbb5;
+  padding: 35px 41px;
+}
+
+.about-info .edit-tag {
+  position: absolute;
+}
+
+.about-info:hover .edit-tag {
+  display: block;
+}
+
+.heading a {
+  float: right;
+  border: 2px solid #55bbb5;
+  border-radius: 2px;
+  padding: 5px 10px;
+}
+
+.heading a:hover {
+  background-color: #55bbb5;
+  color: white;
+}
+
+.heading a.more:hover {
+  background-color: transparent;
+  color: #29a7b2;
+}
+
+.grid-item button {
+  font-size: 0.9em;
+}
+
+.grid-item {
+  position: relative;
+  margin-right: -18px;
+  width: 100%;
+  cursor: auto;
+}
+
+.grid-item:hover {
+  border: 4px dashed #55bbb5;
+}
+
+.grid-item button {
+  width: 100%;
+  border: 0;
+  font-size: 0.85em;
+  padding: 10px;
+}
+
+.grid-item button.update {
+  background-color: #eabb6f;
+  color: white;
+}
+
+.grid-item button.update:hover {
+  background-color: #e5ad53;
+}
+
+.grid-item button.disabled {
+  background-color: lightgray;
+  color: gray;
+  cursor: default;
+}
+
+.update-number input {
+  width: 35px;
+  font-size: 14px;
+}
+
+.update-number input.hide {
+  display: none;
+}
+
+.update-number button {
+  width: auto;
+  font-size: 14px;
+  padding: 3px 8px;
+  border: 0;
+  border-radius: 2px;
+  float: right;
+  background-color: #657189;
+  color: #F4F4F4;
+}
+
+
+
+
+
+/*============================ 手機板開始 ===============================*/
+
+@media screen and (max-width: 480px){
+  
+  .organizer section {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .about-info {
+    padding: 0;
+  }
+  
+  .about-info:hover {
+    border: 0;
+    padding: 0;
+  }
+  
+  .image .edit {padding: 0;}
+  .image .edit a {display: block;}
+  
+}

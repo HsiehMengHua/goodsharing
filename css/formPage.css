@@ -1,0 +1,114 @@
+.form .container {
+  margin: 120px auto;
+  max-width: 550px;
+}
+
+.form .container{
+  max-width: 800px;
+}
+
+.form .container.thin {
+  max-width: 400px;
+}
+
+form .image {
+  width: 40%;
+  padding-right: 70px;
+}
+
+form .image img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+form ul.content {
+  width: 60%;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid #313b4f;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #313b4f;
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+form li {
+  margin-bottom: 30px;
+}
+
+form button {
+  float: right!important;
+  padding: 6px 25px;
+  margin-left: 6px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button.submit {
+  background-color: #edaa5d;
+  color: white;
+}
+
+button.cancel {
+  background-color: #d5d5d5;
+}
+
+#err {
+  float: right;
+  position: relative;
+  top: 10px;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #e02424;
+}
+
+.toLogin {
+  color: #29a7b2;
+  font-size: 0.9em;
+  margin-bottom: 25px;
+}
+
+form span {
+  color: #29a7b2;
+  font-size: 0.9em;
+  margin-left: 25px;
+}
+
+form span:hover {
+  color: #e02424;
+}
+
+.byAccount {
+  display: none;
+}
+
+
+
+
+
+/*============================ 手機板開始 ===============================*/
+
+
+@media screen and (max-width: 480px){
+  form .image, form ul.content {
+    width: 100%;
+    padding: 0;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 15px;  
+  }
+}
